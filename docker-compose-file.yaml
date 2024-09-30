@@ -1,0 +1,15 @@
+services:
+  iac_website:
+    build:
+      context: .
+      dockerfile: iac_Dockerfile
+      no_cache: true
+    image: iac_website
+    ports:
+      - 8090:80
+      - 8091:80
+    hostname: iac_website
+    container_name: iac_website
+    volumes:
+      - /home/maham/volume:/opt/volume
+

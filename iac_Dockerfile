@@ -1,0 +1,18 @@
+FROM ubuntu
+
+RUN apt update
+
+RUN apt install nginx -y
+
+RUN service nginx start
+
+WORKDIR /opt/app
+
+ADD https://github.com/maham0612/test.git /opt/app
+
+RUN cp ./index.html /var/www/html
+
+COPY ./iac_text_file /opt/app
+
+CMD ["nginx", "-g", "daemon off;"]
+
