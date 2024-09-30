@@ -8,7 +8,7 @@ RUN service nginx start
 
 WORKDIR /opt/app
 
-ADD https://github.com/maham0612/test.git /opt/app
+ADD https://github.com/muhammadtalha766/Sample_docker.git /opt/app
 
 RUN cp ./index.html /var/www/html
 
